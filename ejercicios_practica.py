@@ -18,7 +18,7 @@ def ej1():
     # Ejercicios de práctica con números
 
     '''
-    Realice un calculadora, se ingresará por línea de comando dos números reales
+    Realice una calculadora, se ingresará por línea de comando dos números reales
     y se deberá calcular todas las operaciones entre ellos:
     - Suma
     - Resta
@@ -31,8 +31,32 @@ def ej1():
       ej: La suma entre 4.2 y 6.5 es 10.7
 
     '''
+    print('Ingrese el primer número real a operar:')
+    numero_1 = float(input())
+
+    print('Ingrese el segundo número real a operar:')
+    numero_2 = float(input())
+
+    print("El primer numero introducido es:", numero_1)
+    print("El segudno numero introducido es:", numero_2)
+
+    # Alumno: Calcule la suma, resta, división, multiplicación y potencia de los números ingresados
+    # numero_1, numero_2
+
+    suma = numero_1 + numero_2
+    resta = numero_1 - numero_2
+    division = numero_1 / numero_2
+    multiplicacion = numero_1 * numero_2
+    potencia = numero_1 ** numero_2
+
+    print("El resultado de sumar \t\t{} y {} es {}".format(numero_1, numero_2, suma))
+    print("El resultado de restar \t\t{} y {} es {}".format(numero_1, numero_2, resta))
+    print("El resultado de dividir \t{} y {} es {}".format(numero_1,numero_2, division))
+    print("El resultado de multiplicar \t{} y {} es {}".format(numero_1,numero_2, multiplicacion))
+    print("El resultado de elevar \t\t{} a la {} es {}".format(numero_1, numero_2, potencia)) 
 
 def ej2():
+
     # Ejercicios de práctica numérica y cadenas
     
     '''
@@ -50,6 +74,16 @@ def ej2():
       está hablando.
 
     '''
+    Nombre = str(input("Ingrese su nombre completo:\t\t "))
+    DNI = int(input("Ingrese su número de D.N.I:\t\t "))
+    Edad = int(input("Ingrese su edad actual:\t\t\t "))
+    Altura = float(input("Ingrese su altura actual en metros:\t "))
+
+    print("\nNombre Completo: {} \t D.N.I: {} \t Edad actual: {}rtf".format(Nombre, DNI, Edad))
+    print(
+      "\nSu nombre completo es: {} \t Su Numero de D.N.I es: {} \t Su Edad actual es: {} \t Su altura actual es: {} mts \n".format(Nombre, DNI, Edad, Altura)
+      )
+
 def ej3():
     # Ejercicios de práctica con cadenas
 
@@ -79,6 +113,13 @@ def ej3():
     Cualquier duda con el método split pueden consultarla por el campus
         
     '''
+    Padre = str(input("Ingrese el nombre de su padre: "))
+    Madre = str(input("Ingrese el nombre de su madre: "))
+    Hijo = str(input("Ingrese su nombre: "))
+    Padre, Apellido_Padre = Padre.split()
+    Madre, Apellido_Madre = Madre.split()
+    Nombre_Completo = Hijo + ' ' + Apellido_Madre + ' ' + Apellido_Padre
+    print(Nombre_Completo)
 
 def ej4():
     # Ejercicios de práctica con cadenas
@@ -110,6 +151,13 @@ def ej4():
     
         
     '''
+    Persona_1 = str(input("Ingrese su nombre completo: "))
+    Persona_2 = str(input("Ingrese el nombre completo de alguna persona: "))
+    Persona_2, Apellido_Persona_2 = Persona_2.split()
+    if Apellido_Persona_2 in Persona_1:
+      print("Ambas personas son parientes")
+    else:
+      print("Estas personas no son parientes")
 
 def ej5():
     # Ejercicios de práctica con cadenas
@@ -137,10 +185,16 @@ def ej5():
     
 
     '''
+    Nombre = str(input("Ingrese un nombre: "))
+    print(Nombre.lower())
+    print(Nombre.upper())
+    print(Nombre.capitalize())
+
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    ej1()
+    #ej1()
     #ej2()
     #ej3()
     #ej4()
+    #ej5()
